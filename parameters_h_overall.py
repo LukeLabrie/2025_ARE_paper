@@ -99,7 +99,7 @@ t_wd = t_ins + (60*4)
 pi = math.pi
 R = 8.314            # ideal gas constant
 m_H = 0.004          # molar mass of helium (kg/mol)
-P = 2.12             # H-12, 25hr Xenon run, ORNL-1845 p. 186
+P = 2.10             # H-12, 25hr Xenon run, ORNL-1845 p. 186
 
 # density
 rho_inconel = 8.5*1000          # inconel density (kg/m^3)
@@ -147,9 +147,9 @@ C0 = beta / Lam * (1.0 / (lam - (np.exp(-lam * tau_l) - 1.0) / tau_c))
 # core
 ###############################################################################
 
-# wights (borrowed from MSRE model)
-k_f1 = 0.475       # fractional power generation (fuel)
-k_f2 = 0.475        # fractional power generation (fuel)
+# weights (from OpenMC)
+k_f1 = 0.889/2       # fractional power generation (fuel)
+k_f2 = 0.889/2        # fractional power generation (fuel)
 k_m = 1-(k_f1+k_f2) # fractional power generation (beryllium)
 k_1 = 0.5
 k_2 = 1-k_1

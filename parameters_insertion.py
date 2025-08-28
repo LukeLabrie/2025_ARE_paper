@@ -91,9 +91,10 @@ tf = 1000.00
 T = np.arange(t0,tf,0.01)
 
 # reactivity insertion
+inserted = 4e-3
 insert_duration = 0.4/0.011 # ORNL-1845
 t_ins = 300.00
-t_wd = t_ins + (60*4)
+t_wd = t_ins + (60*3.8) - 200.00
 
 # dimensions
 pi = math.pi
