@@ -98,6 +98,7 @@ def are_parameters(hA_param_set:str,
 
     # reactivity insertion
     insert_duration = 0.4/0.011 # ORNL-1845
+    reinsert_duration = 0.4/0.011
     t_ins = 300.00
     t_wd = t_ins + (60*4) - 10.0
 
@@ -514,7 +515,7 @@ def are_parameters(hA_param_set:str,
         hA_ht_hxhw, hA_tw_hxhw, hA_ht_hxhwc, hA_tw_hxhwc = estimated_params
 
     if alpha_param_set == 'OpenMC':
-        a_f, a_m, a_c = -6.10e-05,  1.4e-05,  -0.1e-05
+        a_f, a_m, a_c = -5.5e-05,  -2.1e-05,  -0.064e-05
     elif alpha_param_set == 'leastsq':
         a_f, a_m, a_c = -5.25513819e-05,  1.44614113e-05,  2.57445433e-05
 

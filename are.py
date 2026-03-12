@@ -372,8 +372,8 @@ def build_model(p,
                 return ((t-t_insertion))*(inserted/p['insert_duration']) # linear
             elif (t < p['t_wd']):
                 return inserted
-            elif (t < p['t_wd']+p['insert_duration']):
-                return inserted-((t-p['t_wd']))*(inserted/p['insert_duration']) # linear
+            elif (t < p['t_wd']+p['reinsert_duration']):
+                return inserted-((t-p['t_wd']))*(inserted/p['reinsert_duration']) # linear
             else:
                 return 0.0
 
